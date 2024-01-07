@@ -2,6 +2,7 @@
 """ module for implementation of Pascal's triangle
 """
 
+
 def pascal_triangle(n):
     """ creates a pascal trinagle
     """
@@ -10,7 +11,7 @@ def pascal_triangle(n):
         return []
 
     pt = [0] * n
- 
+
     for x in range(n):
         new_row = [0] * (x + 1)
         new_row[0] = 1
