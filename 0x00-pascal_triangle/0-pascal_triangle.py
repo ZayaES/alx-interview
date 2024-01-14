@@ -19,8 +19,8 @@ def pascal_triangle(n):
 
         for y in range(1, x):
             if y > 0 and y < len(new_row):
-                a = pt[x - 1][y]
                 b = pt[x - 1][y - 1]
+                a = pt[x - 1][y]
                 new_row[y] = a + b
 
         pt[x] = new_row
