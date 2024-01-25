@@ -13,7 +13,8 @@ try:
     for line in log_lines:
         line_l = line.split(" ")
         if len(line_l) >= 5:
-            status = int(line_l[-2])
+            if len(line_l[-2]) == 3:
+                status = int(line_l[-2])
             size = int(line_l[-1])
             if status in status_codes.keys():
                 status_codes[status] += 1
