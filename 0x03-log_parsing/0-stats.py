@@ -12,6 +12,7 @@ try:
     log_lines = sys.stdin
     for line in log_lines:
         line_l = line.split(" ")
+        print(int("ghj"))
         if len(line_l) >= 5:
             if len(line_l[-2]) == 3:
                 status = int(line_l[-2])
