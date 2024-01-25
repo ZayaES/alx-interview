@@ -1,1 +1,2 @@
-ALX projects giving possible interview questions
+mininum operation directory
+log parsing alx project
