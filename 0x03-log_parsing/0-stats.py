@@ -12,7 +12,10 @@ try:
     log_lines = sys.stdin
     for line in log_lines:
         line_l = line.split(" ")
-        if len(line_l) >= 5:
+        if len(line_l) >= 5 and len(line_l[0].split(".")) == 4 \
+                and len(line_l[2].split("-")) == 3 and line_l[4] == '"GET' \
+                and line_l[7] in str(status_codes.keys()) \
+                and int(line_l[8]) in range(1, 1024):
             if len(line_l[-2]) == 3:
                 status = int(line_l[-2])
             size = int(line_l[-1])
